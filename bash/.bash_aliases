@@ -4,7 +4,9 @@ for file in "$HOME/.bash_secrets" "$HOME/.bash_functions"; do
 done
 # Packages, Bash and Process Management
 alias hr="history | rg" # then your word
+alias br="cat ~/.bash_aliases | rg" # then your word
 alias r="sudo apt remove --purge"
+alias tg="tar -xf"
 alias ra="sudo apt autoremove"
 alias u="sudo apt update"
 alias uu="sudo apt update && sudo apt upgrade -y"
