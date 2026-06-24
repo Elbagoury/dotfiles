@@ -51,7 +51,7 @@ alias gspu='cloud-sql-proxy ${GCP_PROJ}:${GCP_REGION}:${GCP_DB_UAT} --port 5434'
 alias il="sudo ifdown wlp0s20f3; sudo pkill wpa_supplicant; sudo ifup enp0s31f6"
 alias iw="sudo ifdown enp0s31f6; sudo ifup wlp0s20f3"
 alias ln="sudo ln -s" # /yourbin /usr/local/bin
-alias ls="ls --color=auto -F"
+alias ls="eza --icons"
 alias ll="ls -lah"
 alias lb="lsblk | bat -l conf"
 alias lc="/lib/x86_64-linux-gnu/libc.so.6" # Chceck glibc version

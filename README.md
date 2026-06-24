@@ -32,7 +32,7 @@ fc-list : family | grep -i "jetbrains" | uniq
 # Network, Sound and Browser
 i wpasupplicant wireless-tools firefox-esr mpv alsa-utils pipewire-audio wireplumber pulsemixer pulseaudio-utils upower
 # My TUI,  add fzf and zoxide conf to .bashrc
-i tmux fzf ripgrep pv zoxide bat pgcli lazygit
+i tmux fzf ripgrep pv zoxide eza bat pgcli lazygit
 i libxcb-cursor0 libxcb-icccm4 fuse libfuse2 # needed to run appimage
 
 ```
