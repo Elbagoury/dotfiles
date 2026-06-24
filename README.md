@@ -52,11 +52,11 @@ rm google-cloud-cli-linux-x86_64.tar.gz
 ./google-cloud-sdk/install.sh
 ```
 ## Sound and Network Configration
-`systemctl --user enable --now pipewire pipewire-pulse wireplumber`
-Add to MPV: ` echo "ao=pipewire" >> ~/.config/mpv/mpv.conf` Test: `mpv /mnt/usb/linux.mp4`
-Run `ip addr` to see cards
-Search for Wifi: `sudo iwlist wlp0s20f3 scan | grep ESSID`
-Save it: `sudo nvim /etc/network/interfaces`
+- Enable: `systemctl --user enable --now pipewire pipewire-pulse wireplumber`
+- Add to MPV: ` echo "ao=pipewire" >> ~/.config/mpv/mpv.conf` Test: `mpv /mnt/usb/linux.mp4`
+- Run `ip addr` to see cards
+- Search for Wifi: `sudo iwlist wlp0s20f3 scan | grep ESSID`
+- Save it: `sudo nvim /etc/network/interfaces`
 ```text
 allow-hotplug wlp0s20f3
 iface wlp0s20f3 inet dhcp
