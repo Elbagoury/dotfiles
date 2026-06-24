@@ -1,7 +1,18 @@
 ## My Dotfiles
-## Install Essential Tools
+### My DWM
 ```sh
-apt install sudo git
+su -
+echo "deb http://deb.debian.org/debian trixie main" > /etc/apt/sources.list
+apt update && apt install sudo curl stow git -y
+usermod -aG sudo <user>
+exit
+git clone git@github.com:Elbagoury/dotfiles.git
+cd dotfiles && stow bash
+source ~/.bashrc
+i xserver-xorg-core xinit libx11-dev libxft-dev libxinerama-dev build-essential
+git clone git@github.com:Elbagoury/src.git
+cd src/dwm && mi
+# if stow not used,  echo "exec dwm" > ~/.xinitrc , test by run startx
 ```
 
 ### Install and config fonts
@@ -16,15 +27,16 @@ stow fonts
 # Verify the Installation
 fc-list : family | grep -i "jetbrains" | uniq
 ```
-## My APT Tools 
+### My APT Tools 
 ```sh
 # Network, Sound and Browser
-i wpasupplicant wireless-tools firefox-esr mpv alsa-utils pipewire-audio wireplumber pulsemixer pulseaudio-utils
+i wpasupplicant wireless-tools firefox-esr mpv alsa-utils pipewire-audio wireplumber pulsemixer pulseaudio-utils upower
 # My TUI,  add fzf and zoxide conf to .bashrc
-i tmux fzf ripgrep zoxide bat lazygit
+i tmux fzf ripgrep pv zoxide bat pgcli lazygit
+i libxcb-cursor0 libxcb-icccm4 fuse libfuse2 # needed to run appimage
 
 ```
-## My local bin 
+### My local bin 
 
 ```sh
 mkdir ~/bin && cd bin
@@ -51,7 +63,7 @@ tar -xf google-cloud-cli-linux-x86_64.tar.gz
 rm google-cloud-cli-linux-x86_64.tar.gz
 ./google-cloud-sdk/install.sh
 ```
-## Sound and Network Configration
+### Sound and Network Configration
 - Enable: `systemctl --user enable --now pipewire pipewire-pulse wireplumber`
 - Add to MPV: ` echo "ao=pipewire" >> ~/.config/mpv/mpv.conf` Test: `mpv /mnt/usb/linux.mp4`
 - Run `ip addr` to see cards
@@ -67,7 +79,7 @@ For Troubleshooting: `wpa_passphrase "Mywifi" "pass" | sudo tee -a /etc/wpa_supp
 `pk wpa_supplicant ; pk dhcpcd ; sudo ifdown wlp0s20f3 ; hw ; sudo dhcpcd wlp0s20f3`
 
 
-## Install latest Docker
+### Install latest Docker
 ```sh
 # Add Docker's official GPG key:
 sudo apt update
