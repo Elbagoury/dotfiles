@@ -89,16 +89,17 @@ vim.pack.add({
     'https://github.com/stevearc/oil.nvim',
     'https://github.com/MeanderingProgrammer/render-markdown.nvim',
     'https://github.com/kdheepak/lazygit.nvim',
-	'https://github.com/esmuellert/codediff.nvim',       
+    'https://github.com/esmuellert/codediff.nvim',       
     'https://github.com/rebelot/kanagawa.nvim',
-	'https://github.com/nvim-lualine/lualine.nvim',
-	'https://github.com/nvim-tree/nvim-web-devicons',
-	'https://github.com/lewis6991/gitsigns.nvim',    
+    'https://github.com/nvim-lualine/lualine.nvim',
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/lewis6991/gitsigns.nvim',
 })
 
 -- Activate Colorscheme
 vim.cmd('colorscheme kanagawa-wave')
 require('gitsigns').setup()
+
 
 -- Configure Statusline Output Layout
 require('lualine').setup({
