@@ -36,3 +36,10 @@ code-container() {
     # 4. Fire up VS Code explicitly targeted at the correct internal workspace file structural layer
     code --folder-uri "vscode-remote://dev-container+${hex_path}${internal_ws}"
 }
+
+screen-record(){
+    ffmpeg -f x11grab -video_size 1920x1080 -framerate 30 -i :0.0+0,0 \
+       -f pulse -i  alsa_input.usb-Shenzhen_jiayz_photo_industrial_Ltd_BY-V20_433035383239332E-01.analog-stereo \
+       -c:v libx264 -preset ultrafast -crf 18 -c:a aac \
+       ~/dow/screen_hdmi.mp4
+}

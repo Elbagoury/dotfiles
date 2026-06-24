@@ -2,45 +2,25 @@
 for file in "$HOME/.bash_secrets" "$HOME/.bash_functions"; do
     [ -f "$file" ] && source "$file"
 done
-# Packages, Bash and Process Management
-alias hr="history | rg" # then your word
-alias br="cat ~/.bash_aliases | rg" # then your word
-alias r="sudo apt remove --purge"
-alias tg="tar -xf"
-alias ra="sudo apt autoremove"
-alias u="sudo apt update"
-alias uu="sudo apt update && sudo apt upgrade -y"
-alias s="sudo apt search"
-alias i="sudo apt install"
-alias mi="sudo make clean install"
-alias di="sudo dpkg -i"
-alias df="sudo apt --fix-broken install"
-alias cx="sudo chmod +x" # add excution to scripts
-alias pk="sudo pkill -9"
-alias sl="sudo ln -s" # /yourbin /usr/local/bin
+# Single: A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
+alias b="cat ~/.bash_aliases | rg" # then your word
 alias c="clear"
+alias i="sudo apt install"
+alias s="sudo apt search"
+alias r="sudo apt remove --purge"
+alias h="history | rg" # then your word
+alias u="sudo apt update"
 alias q="exit"
-alias ls="ls --color=auto -F"
-alias ll="ls -lah"
+# A,B,C,D,E,F: apt,dpkg,du, code, chmod,ffmpeg
+alias af="sudo apt --fix-broken install"
+alias au="sudo apt update && sudo apt upgrade -y"
+alias aa="sudo apt autoremove"
+alias cc='code-container'
+alias cx="sudo chmod +x" # add excution to scripts
+alias di="sudo dpkg -i"
 alias ds="du -hx --max-depth=1 . | sort -rh | head -n 20"
-alias ps="pass insert -m dotfiles/bash_secrets < ~/.bash_secrets"
-alias pp="pass git pull && rm ~/.bash_secrets && pass show dotfiles/bash_secrets > ~/.bash_secrets"
-alias lb="lsblk | bat -l conf"
-alias mo="sudo mount /dev/sdc1 /mnt/usb"
-# Source & Services Management
-alias sb="source ~/.bashrc"
-alias ss="sudo systemctl status" 
-alias sp="sudo systemctl stop"
-alias st="sudo systemctl start"
-alias sr="sudo systemctl restart"
-alias se="sudo systemctl enable --now"
-# Hardware Management
-alias hu="cd ~ && sudo umount /mnt/usb"
-alias hw="sudo wpa_supplicant -i wlp0s20f3 -c /etc/wpa_supplicant/wpa_supplicant.conf"
-alias hx="xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0  --output DP-2 --mode 1920x1080 --right-of HDMI-1"
-alias hl="sudo ifdown wlp0s20f3; sudo pkill wpa_supplicant; sudo ifup enp0s31f6"
-alias hh="sudo ifdown enp0s31f6; sudo ifup wlp0s20f3"
-# Git Management
+alias fr='screen-record'
+# G,H,I,J,K,L: git, gcloud, gpg, gam,ifdown, ifup,ifconfig, ln, ls, lsblk, lib, lazygit
 alias gu="git pull"
 alias gp="git push"
 alias gs="git status"
@@ -48,13 +28,51 @@ alias ga="git add"
 alias gd="git diff"
 alias gc="git commit -m"
 alias gl="git log --oneline --graph --decorate"
-alias gz="lazygit"
-# Cloud and Code Management
-alias cl="gcloud compute instances list"
-alias cp='gcloud compute ssh ${GCP_USER}@${GCP_PROD_INS}'
-alias cu='gcloud compute ssh ${GCP_USER}@${GCP_UAT_INS}'
-alias cs='pass show -c ${GCP_DB_PASS} && gcloud sql connect ${GCP_DB_PROD} -u ${GCP_DB_USER} -d ${GCP_DB}'
-alias ct='pass show -c ${GCP_DB_PASS} && gcloud sql connect ${GCP_DB_UAT} -u ${GCP_DB_USER} -d ${GCP_DB}'
-alias ci='ssh ${OI_IP}'
-alias cj='ssh ${ORJ_IP}'
-alias cc='code-container'
+alias ggn='git config --global user.name "Mohamed Elbagoury"' # Use 3 letters alias if it used one time
+alias ggm='git config --global user.email ${HOTMAIL}'
+alias gpep='gpg --export -a ${HOTMAIL} > ~/dow/public.key'
+alias gpes='gpg --export-secret-keys -a ${HOTMAIL} > ~/dow/private.key'
+alias gpeo='gpg --export-ownertrust > ~/dow/otrust.txt'
+alias gpip='gpg --import ~/dow/public.key'
+alias gpis='gpg --import ~/dow/private.key'
+alias gpio='gpg --import-ownertrust ~/dow/otrust.txt'
+alias gpk='gpg --list-secret-keys --keyid-format LONG'
+alias gm='gam user ${TACMAIL} check serviceaccount'
+alias gmm='gam user ${TACMAIL} show messages query' # then your search: "odoo after:2026/01/01"
+alias gcl="gcloud compute instances list"
+alias gcp='gcloud compute ssh ${GCP_USER}@${GCP_PROD_INS}'
+alias gcu='gcloud compute ssh ${GCP_USER}@${GCP_UAT_INS}'
+alias gsp='pass show -c ${GCP_DB_PASS} && gcloud sql connect ${GCP_DB_PROD} -u ${GCP_DB_USER} -d ${GCP_DB}'
+alias gsu='pass show -c ${GCP_DB_PASS} && gcloud sql connect ${GCP_DB_UAT} -u ${GCP_DB_USER} -d ${GCP_DB}'
+alias il="sudo ifdown wlp0s20f3; sudo pkill wpa_supplicant; sudo ifup enp0s31f6"
+alias iw="sudo ifdown enp0s31f6; sudo ifup wlp0s20f3"
+alias ln="sudo ln -s" # /yourbin /usr/local/bin
+alias ls="ls --color=auto -F"
+alias ll="ls -lah"
+alias lb="lsblk | bat -l conf"
+alias lc="/lib/x86_64-linux-gnu/libc.so.6" # Chceck glibc version
+alias lg="lazygit"
+# M,N,O,P,Q,R: make, mount, pass, pkill
+alias mi="sudo make clean install"
+alias mm="sudo mount /dev/sdc1 /mnt/usb"
+alias mu="cd ~ && sudo umount /mnt/usb"
+alias pi="pass insert -m" # dotfiles/myfile < ~/.file"
+alias pe="pass edit" # dotfiles/myfile
+alias ps="pass show" # dotfiles/bash_secrets > ~/.bash_secrets"
+alias pc="pass show -c "
+alias ps="pass rm"
+alias pk="sudo pkill -9"
+# S,T,U,V,W,X,Y,Z : ssh, source, systemctl, tar, wpa_supplicant, xrandr
+alias sb="source ~/.bashrc"
+alias ss="sudo systemctl status" 
+alias sp="sudo systemctl stop"
+alias st="sudo systemctl start"
+alias sr="sudo systemctl restart"
+alias se="sudo systemctl enable --now"
+alias so='ssh ${OI_IP}'
+alias sj='ssh ${ORJ_IP}'
+alias tx="tar -xf"
+alias ww="sudo wpa_supplicant -i wlp0s20f3 -c /etc/wpa_supplicant/wpa_supplicant.conf"
+alias xc="xrandr | rg connected"
+alias xd="xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0  --output DP-2 --mode 1920x1080 --right-of HDMI-1"
+alias xm="xrandr --output eDP-1 --auto --primary --output HDMI-1 --off --output DP-1 --off"
