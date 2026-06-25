@@ -1,0 +1,68 @@
+Esc / Ctrl+c    | NORMAL MODE
+i               | INSERT MODE (Before cursor)
+a               | INSERT MODE (After cursor)
+o               | INSERT MODE (Open a new line below)
+v               | VISUAL MODE (Character selection)
+V               | VISUAL LINE MODE (Line selection)
+Ctrl+v          | VISUAL BLOCK MODE (Column/vertical)
+:wq             | Write and Quit
+:q!             | Quit without saving
+:w              | Write
+:q              | Quit
+:wa             | Write all open files
+h               | Move Left
+j               | Move Down
+k               | Move Up
+l               | Move Right
+0               | Move to the start of the line
+^               | Move to the first character of the line
+$               | Move to the end of the current line
+w               | Move forward to the start of the next word
+e               | Move forward to the end of the next word
+b               | Move backward to the start of the previous word
+gg              | Move to the start of the file
+G               | Move to the end of the file
+:N              | Jump to line number N (e.g., :42)
+H               | Move cursor to Top of the screen
+M               | Move cursor to Middle of the screen
+L               | Move cursor to Bottom of the screen
+y               | Copy (Yank) selected text
+yy              | Copy (Yank) the entire current line
+Y               | Copy from cursor to the end of the line
+p               | Paste copied text after the cursor
+P               | Paste copied text before the cursor
+"+y             | Copy selected text to the system clipboard
+"+p             | Paste text from the system clipboard
+d               | Delete (Cut) selected text
+dd              | Delete (Cut) the entire current line
+dw              | Delete from cursor to the start of the next word
+x               | Delete character under the cursor
+r               | Replace a single character under the cursor
+R               | Enter REPLACE MODE (Overwrite text)
+u               | Undo last action
+Ctrl+r          | Redo last undone action
+.               | Repeat the last editing command
+ci"             | Change inside double quotes ""
+ci(             | Change inside parentheses ()
+cit             | Change inside XML/HTML tags
+di"             | Delete everything inside double quotes ""
+yi"             | Copy everything inside double quotes ""
+*               | Search forward for the word under the cursor
+/               | Search forward for a custom pattern
+?               | Search backward for a custom pattern
+n               | Go to the next search match
+N               | Go to the previous search match
+:%s/old/new/g   | Find and replace 'old' with 'new' globally
+:%s/old/new/gc  | Find and replace globally, asking for confirm
+:Explore        | Open the built-in file manager (Netrw)
+:split or :sp   | Split screen horizontally 
+:vsplit or :vsp | Split screen vertically
+Ctrl+w w        | Cycle/switch focus between open split windows
+Ctrl+w q        | Close the current split window
+>>              | Indent the current line
+<<              | Unindent the current line
+Ctrl+n          | INSERT : Autocomplete
+:e ~/file       | Edit file in buffer
+:ls             | Show files in buffer
+:b npfl/123     | Move n-next buffer, p-previous,first,las
+:r ~/file       | Read the file content to current buffer

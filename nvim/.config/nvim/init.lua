@@ -102,28 +102,8 @@ require('gitsigns').setup()
 
 
 -- Configure Statusline Output Layout
-require('lualine').setup({
-    options = {
-        theme = 'kanagawa',        -- Auto-matches your wave UI environment
-        icons_enabled = true,      -- Flip to false if your 'st' build lacks a Nerd Font
-        component_separators = { left = '│', right = '│' },
-        section_separators = { left = '', right = '' },
-    },
-    sections = {
-        lualine_a = { 'mode' },    -- Displays: NORMAL / INSERT / VISUAL
-        lualine_b = { 'branch' },  -- Displays: Current Git Branch Name
-        lualine_c = { { 'filename', path = 1 } }, -- Displays relative file path
-        lualine_x = { 'diagnostics', 'filetype' },
-        lualine_y = { 'progress' },
-        lualine_z = { 
-            { 'datetime', style = '%H:%M' } --Displays Current Time (Hours:Minutes)
-         } 
-    },
-})
-
--- Markdown
+require('lualine').setup({options = {theme = 'kanagawa', icons_enabled = true}})
 require('render-markdown').setup({})
-
 -- FzfLua Setup
 local fzf = require('fzf-lua')
 fzf.setup({
