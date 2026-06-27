@@ -56,10 +56,13 @@ alias ll="ls -lah"
 alias lb="lsblk | bat -l conf"
 alias lc="/lib/x86_64-linux-gnu/libc.so.6" # Chceck glibc version
 alias lg="lazygit"
-# M,N,O,P,Q,R: make, mount, pass, pkill, pgcli, ps_mem
+# M,N,O,P,Q,R: make, mount,nmcli, pass, pkill, pgcli, ps_mem
 alias mi="sudo make clean install"
 alias mm="sudo mount /dev/sdc1 /mnt/usb"
 alias mu="cd ~ && sudo umount /mnt/usb"
+alias nd="nmcli device" # check devices `sd wpa_supplicant` first
+alias nw="nmcli device wifi list"
+alias nwc="nmcli device wifi connect" # "wifi" password "pass"
 alias pf="pass insert -m" # dotfiles/myfile < ~/.file"
 alias pe="pass edit" # dotfiles/myfile
 alias ps="pass show" # dotfiles/bash_secrets > ~/.bash_secrets"
@@ -76,6 +79,7 @@ alias ss="sudo systemctl status"
 alias sp="sudo systemctl stop"
 alias st="sudo systemctl start"
 alias sr="sudo systemctl restart"
+alias sd="sudo systemctl disable"
 alias se="sudo systemctl enable --now"
 alias so='ssh ${OI_IP}'
 alias sj='ssh ${ORJ_IP}'
