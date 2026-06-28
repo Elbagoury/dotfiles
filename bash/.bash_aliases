@@ -22,7 +22,7 @@ alias ds="du -hx --max-depth=1 . | sort -rh | head -n 20"
 alias dbc='docker exec -i tac12_devcontainer-db-1 psql -U odoo -d postgres -c "CREATE DATABASE odoo_prod;"'
 alias dbr='pv ~/dow/odoo-db.sql | docker exec -i tac12_devcontainer-db-1 psql -U odoo -d odoo_prod'
 alias fr='screen-record'
-# G,H,I,J,K,L: git, gcloud, gpg, gam,ifdown, ifup,ifconfig, ln, ls, lsblk, lib, lazygit
+# G,H,I,J,K,L: git, gcloud, gpg, gam,go, ifdown, ifup,ifconfig, ln, ls, lsblk, lib, lazygit
 alias gu="git pull"
 alias gp="git push"
 alias gs="git status"
@@ -41,6 +41,7 @@ alias gpio='gpg --import-ownertrust ~/dow/otrust.txt'
 alias gpk='gpg --list-secret-keys --keyid-format LONG'
 alias gm='gam user ${TACMAIL} check serviceaccount'
 alias gmm='gam user ${TACMAIL} show messages query' # then your search: "odoo after:2026/01/01"
+alias gmt='gam user ${TACMAIL} show tasks tasklists "tltitle:Doing" | rg "title:"'
 alias gcl="gcloud compute instances list"
 alias gcp='gcloud compute ssh ${GCP_USER}@${GCP_PROD_INS}'
 alias gcu='gcloud compute ssh ${GCP_USER}@${GCP_UAT_INS}'
@@ -48,6 +49,10 @@ alias gsp='pass show -c ${GCP_DB_PASS} && gcloud sql connect ${GCP_DB_PROD} -u $
 alias gsu='pass show -c ${GCP_DB_PASS} && gcloud sql connect ${GCP_DB_UAT} -u ${GCP_DB_USER} -d ${GCP_DB}'
 alias gspp='cloud-sql-proxy ${GCP_PROJ}:${GCP_REGION}:${GCP_DB_PROD} --port 5433'  # use it wih pgcli
 alias gspu='cloud-sql-proxy ${GCP_PROJ}:${GCP_REGION}:${GCP_DB_UAT} --port 5434'
+alias gcgd='gcloud compute instance-groups managed delete' # your group name
+alias gcgc='gcloud compute instance-groups managed create --template=${GCP_TEMP_PROD}' # your group name
+alias gcsp='gcloud config set project ${GCP_PROJ}'
+alias goi='sudo tar -C /usr/local -xzf' # go..gz after you wget go from go.dev,add Path in ~/.profile 
 alias il="sudo ifdown wlp0s20f3; sudo pkill wpa_supplicant; sudo ifup enp0s31f6"
 alias iw="sudo ifdown enp0s31f6; sudo ifup wlp0s20f3"
 alias ln="sudo ln -s" # /yourbin /usr/local/bin

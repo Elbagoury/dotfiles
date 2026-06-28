@@ -29,3 +29,5 @@ fi
 
 # Added by Antigravity CLI installer
 export PATH="/home/bagoury/.local/bin:$PATH"
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
