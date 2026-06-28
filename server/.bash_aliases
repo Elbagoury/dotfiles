@@ -71,7 +71,7 @@ alias pgp='pass show -c ${GCP_DB_PASS} && pgcli -h 127.0.0.1 -p 5433 -U ${GCP_DB
 alias pgu='pass show -c ${GCP_DB_PASS} && pgcli -h 127.0.0.1 -p 5434 -U ${GCP_DB_USER} -d ${GCP_DB}'
 alias pgl='pgcli -h 127.0.0.1 -p 5432 -U odoo -d odoo_prod'
 alias pm='sudo ps_mem'
-# S,T,U,V,W,X,Y,Z : ssh, source, systemctl, tar, wpa_supplicant, xrandr
+# S,T,U,V,W,X,Y,Z : ssh, source, systemctl, tar,vim, wpa_supplicant, xrandr
 alias sb="source ~/.bashrc"
 alias ss="sudo systemctl status" 
 alias sp="sudo systemctl stop"
@@ -79,7 +79,10 @@ alias st="sudo systemctl start"
 alias sr="sudo systemctl restart"
 alias sd="sudo systemctl disable"
 alias se="sudo systemctl enable --now"
-alias so='ssh ${OI_IP}'
-alias sj='ssh ${ORJ_IP}'
+alias sdr="sudo systemctl daemon-reload"
+alias sop="sudo service odoo-server stop && sudo pkill -9 python"
+alias sot="sudo service odoo-server start"
 alias tx="tar -xf"
 alias tf="tar -tf" # file then | head -n 5 to check the content of the file
+alias voc="sudo vim /etc/odoo-server.conf"
+alias vos="sudo vim /etc/init.d/odoo-server"
