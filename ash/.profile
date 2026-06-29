@@ -1,4 +1,4 @@
-~/.env
+. ~/.env
 alias i="apk add"
 alias r="apk del"
 alias s="apk search"
