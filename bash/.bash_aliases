@@ -11,7 +11,7 @@ alias r="sudo apt remove --purge"
 alias h="history | rg" # then your word
 alias u="sudo apt update"
 alias q="exit"
-# A,B,C,D,E,F: apt,dpkg,du,docker, code, chmod,ffmpeg
+# A,B,C,D,E,F: apt,dpkg,du,docker, code, chmod,ffmpeg, fzf
 alias af="sudo apt --fix-broken install"
 alias au="sudo apt update && sudo apt upgrade -y"
 alias aa="sudo apt autoremove"
@@ -22,6 +22,7 @@ alias ds="du -hx --max-depth=1 . | sort -rh | head -n 20"
 alias dbc='docker exec -i tac12_devcontainer-db-1 psql -U odoo -d postgres -c "CREATE DATABASE odoo_prod;"'
 alias dbr='pv ~/dow/odoo-db.sql | docker exec -i tac12_devcontainer-db-1 psql -U odoo -d odoo_prod'
 alias fr='screen-record'
+alias fk='kill -9 **' # <Tab> to choose the process, do it with vim, cd, ssh
 # G,H,I,J,K,L: git, gcloud, gpg, gam,go, ifdown, ifup,ifconfig, ln, ls, lsblk, lib, lazygit
 alias gu="git pull"
 alias gp="git push"
@@ -93,5 +94,6 @@ alias tx="tar -xf"
 alias tf="tar -tf" # file then | head -n 5 to check the content of the file
 alias ww="sudo wpa_supplicant -i wlp0s20f3 -c /etc/wpa_supplicant/wpa_supplicant.conf"
 alias xc="xrandr | rg connected"
-alias xd="xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0  --output DP-2 --mode 1920x1080 --right-of HDMI-1"
-alias xm="xrandr --output eDP-1 --auto --primary --output HDMI-1 --off --output DP-1 --off"
+alias xt="xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 1920x1080 --pos 0x0  --output DP-2 --mode 1920x1080 --right-of HDMI-1"
+alias xm="xrandr --output eDP-1 --auto --primary"
+alias xh="xrandr --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --output eDP-1 --mode 1920x1080 --right-of HDMI-1"
