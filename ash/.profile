@@ -14,7 +14,7 @@ alias ggn='git config --global user.name "Mohamed Elbagoury"'
 alias ggm='git config --global user.email ${HOTMAIL}'
 alias ll="ls -lah"
 alias sci="ssh-copy-id" # user@server_ip
-alias soi='ssh ${OI_IP}'
-alias sor='ssh ${ORJ_IP}'
+alias soi='ssh ${SUSER}@${OI_IP}'
+alias sor='ssh ${SUSER}@${ORJ_IP}'
 
 
