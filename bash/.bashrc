@@ -153,12 +153,6 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     PS1="\[\e[1;36m\](\h)\[\e[0m\] $PS1"
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/bagoury/bin/google-cloud-sdk/path.bash.inc' ]; then . '/home/bagoury/bin/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/bagoury/bin/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bagoury/bin/google-cloud-sdk/completion.bash.inc'; fi
-
 # Pi
 export PATH="/home/bagoury/.local/share/pi-node/node-v22.22.3-linux-x64/bin:$PATH"
 
@@ -168,3 +162,9 @@ export PATH="/home/bagoury/.local/bin:$PATH"
 export PATH="/home/bagoury/.local/bin:$PATH"
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/bagoury/bin/google-cloud-sdk/path.bash.inc' ]; then . '/home/bagoury/bin/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/bagoury/bin/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bagoury/bin/google-cloud-sdk/completion.bash.inc'; fi

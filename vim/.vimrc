@@ -1,5 +1,5 @@
-set number  "Show the line numbers
-set relativenumber
+"set number  "Show the line numbers
+"set relativenumber
 set t_Co=16
 filetype plugin indent on
 syntax on

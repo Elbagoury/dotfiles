@@ -62,18 +62,23 @@ alias ll="ls -lah"
 alias lb="lsblk | bat -l conf"
 alias lc="/lib/x86_64-linux-gnu/libc.so.6" # Chceck glibc version
 alias lg="lazygit"
-# M,N,O,P,Q,R: make, mount,nmcli, pass, pkill, pgcli, ps_mem
+# M,N,O,P,Q,R: make, mount,mkfs, nmcli, pass, pkill, pgcli, ps_mem
 alias mi="sudo make clean install"
 alias mm="sudo mount /dev/sdc1 /mnt/usb"
 alias mu="cd ~ && sudo umount /mnt/usb"
+alias mk="sudo mkfs.vfat -F 32" # lb, /dev/sdc1 .ext4
 alias nd="nmcli device" # check devices `sd wpa_supplicant` first
 alias nw="nmcli device wifi list"
 alias nwc="nmcli device wifi connect" # "wifi" password "pass"
-alias pf="pass insert -m" # dotfiles/myfile < ~/.file"
+alias pa="pass insert" # add existing passwords 
+alias pam="pass insert -m" # dotfiles/myfile < ~/.file"
 alias pe="pass edit" # dotfiles/myfile
 alias ps="pass show" # dotfiles/bash_secrets > ~/.bash_secrets"
 alias pc="pass show -c "
+alias pg="pass generate" # /customer/.. then number
 alias pr="pass rm"
+alias pu="pass git pull"
+alias pp="pass git push"
 alias pk="sudo pkill -9"
 alias pgp='pass show -c ${GCP_DB_PASS} && pgcli -h 127.0.0.1 -p 5433 -U ${GCP_DB_USER} -d ${GCP_DB}'
 alias pgu='pass show -c ${GCP_DB_PASS} && pgcli -h 127.0.0.1 -p 5434 -U ${GCP_DB_USER} -d ${GCP_DB}'
