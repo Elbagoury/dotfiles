@@ -39,7 +39,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 curl -fsSL https://opencode.ai/v2/install | bash
 curl -fsSL https://antigravity.google/cli/install.sh | bash
 curl -fsSL https://chatgpt.com/codex/install.sh | sh
-curl -fsSL https://pi.dev/install.sh | shg
+curl -fsSL https://pi.dev/install.sh | sh
 curl -fsSL https://herdr.dev/install.sh | sh  # it tmux with agets
 curl -fsSL tuicr.dev/install.sh | sh          # code Review
 
