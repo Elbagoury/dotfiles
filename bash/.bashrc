@@ -74,7 +74,6 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
     alias dir='dir --color=auto'
     alias grep='grep --color=auto'
 fi
@@ -159,12 +158,15 @@ export PATH="/home/bagoury/.local/share/pi-node/node-v22.22.3-linux-x64/bin:$PAT
 
 # Added by Antigravity CLI installer
 export PATH="/home/bagoury/.local/bin:$PATH"
-export PATH="/home/bagoury/.local/bin:$PATH"
-export EDITOR="nvim"
-export VISUAL="nvim"
-
+export EDITOR="vim"
+export VISUAL="vim"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/bagoury/bin/google-cloud-sdk/path.bash.inc' ]; then . '/home/bagoury/bin/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/bagoury/bin/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bagoury/bin/google-cloud-sdk/completion.bash.inc'; fi
+
+# opencode
+export PATH=/home/bagoury/.opencode/bin:$PATH
