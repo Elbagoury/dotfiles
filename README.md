@@ -34,6 +34,15 @@ i wpasupplicant wireless-tools firefox-esr mpv alsa-utils pipewire-audio wireplu
 # My TUI,  add fzf and zoxide conf to .bashrc
 i tmux fzf ripgrep pv zoxide eza bat pgcli lazygit xonsh glow
 i libxcb-cursor0 libxcb-icccm4 fuse libfuse2 # needed to run appimage
+# For AI Coding :
+curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://opencode.ai/v2/install | bash
+curl -fsSL https://antigravity.google/cli/install.sh | bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+curl -fsSL https://pi.dev/install.sh | shg
+curl -fsSL https://herdr.dev/install.sh | sh  # it tmux with agets
+curl -fsSL tuicr.dev/install.sh | sh          # code Review
+
 
 ```
 ### My local bin 
