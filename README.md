@@ -9,7 +9,7 @@ exit
 git clone git@github.com:Elbagoury/dotfiles.git
 cd dotfiles && stow bash
 source ~/.bashrc
-i xserver-xorg-core xinit libx11-dev libxft-dev libxinerama-dev build-essential
+i xserver-xorg-core xinit libx11-dev libxft-dev libxinerama-dev build-essential hyperfine dunst libnotify-bin libnotify4
 git clone git@github.com:Elbagoury/src.git
 cd src/dwm && mi
 # if stow not used,  echo "exec dwm" > ~/.xinitrc , test by run startx
