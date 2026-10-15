@@ -62,7 +62,7 @@ alias ll="ls -lah"
 alias lb="lsblk | bat -l conf"
 alias lc="/lib/x86_64-linux-gnu/libc.so.6" # Chceck glibc version
 alias lg="lazygit"
-# M,N,O,P,Q,R: make, mount,mkfs, nmcli, pass, pkill, pgcli, ps_mem
+# M,N,O,P,Q,R: make, mount,mkfs, nmcli, pass, pkill, pgcli, ps_mem, ps
 alias mi="sudo make clean install"
 alias mm="sudo mount /dev/sdc1 /mnt/usb"
 alias mu="cd ~ && sudo umount /mnt/usb"
@@ -72,18 +72,19 @@ alias nw="nmcli device wifi list"
 alias nwc="nmcli device wifi connect" # "wifi" password "pass"
 alias pa="pass insert" # add existing passwords 
 alias pam="pass insert -m" # dotfiles/myfile < ~/.file"
-alias pe="pass edit" # dotfiles/myfile
-alias ps="pass show" # dotfiles/bash_secrets > ~/.bash_secrets"
-alias pc="pass show -c "
-alias pg="pass generate" # /customer/.. then number
-alias pr="pass rm"
-alias pu="pass git pull"
-alias pp="pass git push"
+alias pae="pass edit" # dotfiles/myfile
+alias pas="pass show" # dotfiles/bash_secrets > ~/.bash_secrets"
+alias pac="pass show -c "
+alias pag="pass generate" # /customer/.. then number
+alias par="pass rm"
+alias pau="pass git pull"
+alias pap="pass git push"
 alias pk="sudo pkill -9"
 alias pgp='pass show -c ${GCP_DB_PASS} && pgcli -h 127.0.0.1 -p 5433 -U ${GCP_DB_USER} -d ${GCP_DB}'
 alias pgu='pass show -c ${GCP_DB_PASS} && pgcli -h 127.0.0.1 -p 5434 -U ${GCP_DB_USER} -d ${GCP_DB}'
 alias pgl='pgcli -h 127.0.0.1 -p 5432 -U odoo -d odoo_prod'
-alias pm='sudo ps_mem'
+alias psm='sudo ps_mem'
+alias pso='ps -o pid,rss,comm -p' # then add pid use pidof <st/dwm/code ..etc>
 # S,T,U,V,W,X,Y,Z : ssh, source, systemctl, tar, wpa_supplicant, xrandr
 alias sb="source ~/.bashrc"
 alias ss="sudo systemctl status" 
