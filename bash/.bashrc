@@ -160,8 +160,6 @@ export PATH="/home/bagoury/.local/share/pi-node/node-v22.22.3-linux-x64/bin:$PAT
 export PATH="/home/bagoury/.local/bin:$PATH"
 export EDITOR="vim"
 export VISUAL="vim"
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/bagoury/bin/google-cloud-sdk/path.bash.inc' ]; then . '/home/bagoury/bin/google-cloud-sdk/path.bash.inc'; fi
 

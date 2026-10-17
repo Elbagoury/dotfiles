@@ -42,7 +42,9 @@ curl -fsSL https://chatgpt.com/codex/install.sh | sh
 curl -fsSL https://pi.dev/install.sh | sh
 curl -fsSL https://herdr.dev/install.sh | sh  # it tmux with agets
 curl -fsSL tuicr.dev/install.sh | sh          # code Review
-
+# Local AI
+# Check new llm models  
+curl -fsSL https://llmfit.axjns.dev/install.sh | sh
 
 ```
 ### My local bin 
