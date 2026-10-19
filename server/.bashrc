@@ -1,5 +1,10 @@
 # ~/.bashrc: load ble.sh for interactive shells only
 if [[ $- == *i* ]]; then
+    # st terminal sends TERM=st-256color; fall back when the server lacks its terminfo
+    if [[ $TERM == st-256color ]] && ! infocmp st-256color &>/dev/null; then
+        export TERM=xterm-256color
+    fi
+
     source ~/.local/share/blesh/ble.sh
 
     # Basic colors: green user@host, blue path, colored ls and grep
