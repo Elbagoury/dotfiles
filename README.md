@@ -43,6 +43,7 @@ curl -fsSL https://pi.dev/install.sh | sh
 curl -fsSL https://herdr.dev/install.sh | sh  # it tmux with agets
 curl -fsSL tuicr.dev/install.sh | sh          # code Review
 # Local AI
+curl -fsSL https://ollama.com/install.sh | sh
 # Check new llm models  
 curl -fsSL https://llmfit.axjns.dev/install.sh | sh
 

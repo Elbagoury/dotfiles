@@ -168,3 +168,4 @@ if [ -f '/home/bagoury/bin/google-cloud-sdk/completion.bash.inc' ]; then . '/hom
 
 # opencode
 export PATH=/home/bagoury/.opencode/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
